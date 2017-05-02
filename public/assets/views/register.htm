@@ -1,0 +1,69 @@
+<div id="innerSignUp" class="form-container" ng-controller="RegisterController">
+    <form name="regForm" ng-submit="register(regForm.$valid);" id="registerForm" method="POST" novalidate="novalidate">
+
+        <!--FIRST NAME-->
+        <label for="firstName"> First Name </label><br>
+        <input class="form-control" ng-model="formModel.firstName" name="firstName" id="firstName" type="text" ng-pattern="/^([a-zA-Z]{2,10})+$/"
+            ng-minlength="3" ng-maxlength="20" required>
+        <div class="errors" id="firstNameError">
+            <p ng-show="(!regForm.firstName.$pristine && regForm.firstName.$error.required) || (regForm.$submitted && regForm.firstName.$error.required)">
+                This field is required!</p>
+            <ul class="regMessages" ng-show="(!regForm.firstName.$pristine && regForm.firstName.$error.pattern) || (!regForm.firstName.$pristine && regForm.firstName.$error.minlength)
+                             || (!regForm.firstName.$pristine && regForm.firstName.$error.maxlength)">
+                <li class="regMessages">At least 3 and max 20 characters!</li>
+            </ul>
+        </div>
+
+        <!--SECOND NAME-->
+        <label for="secondName"> Second Name </label><br>
+        <input class="form-control" ng-model="formModel.secondName" name="secondName" id="secondName" type="text" ng-pattern="/^([a-zA-Z]{2,10})+$/"
+            ng-minlength="3" ng-maxlength="20" required>
+        <div class="errors" id="secondNameError">
+            <p ng-show="!regForm.secondName.$pristine && regForm.secondName.$error.required || (regForm.$submitted && regForm.secondName.$error.required)">
+                This field is required!</p>
+            <ul class="regMessages" ng-show="(!regForm.secondName.$pristine && regForm.secondName.$error.pattern) || (!regForm.secondName.$pristine && regForm.secondName.$error.minlength)
+                             || (!regForm.secondName.$pristine && regForm.secondName.$error.maxlength)">
+                <li class="regMessages">At least 3 and max 20 characters!</li>
+            </ul>
+        </div>
+
+        <!--EMAIL-->
+        <label for="email"> Email </label><br>
+        <input class="form-control" ng-model="formModel.email" name="email" id="email" type="text" ng-pattern="/^\w.+@[a-zA-Z]+?\.[a-zA-Z]{2,3}$/"
+            ng-minlength="3" ng-maxlength="50" required>
+        <div class="errors" id="emailError">
+            <p ng-show="(!regForm.email.$pristine && regForm.email.$error.required) || (regForm.$submitted && regForm.email.$error.required)">
+                This field is required!</p>
+            <ul class="regMessages" ng-show="(!regForm.email.$pristine && regForm.email.$error.pattern) || (!regForm.email.$pristine && regForm.email.$error.minlength)
+                             || (!regForm.email.$pristine && regForm.email.$error.maxlength)">
+                <!--<li>It must contain @!</li>-->
+                <li>To contain @, at least 3 and max 50 characters!</li>
+            </ul>
+        </div>
+
+        <!--PASSWORD-->
+        <label for="password"> Password </label><br>
+        <input class="form-control" ng-model="formModel.password" name="password" id="password" type="password" ng-minlength="8" required>
+        <div class="errors">
+            <p ng-show="(!regForm.password.$pristine && regForm.password.$error.required) || (regForm.$submitted && regForm.password.$error.required)">
+                This field is required!</p>
+            <ul class="regMessages" ng-show="(!regForm.password.$pristine && regForm.password.$error.minlength)">
+                <li>At least 8 characters!</li>
+            </ul>
+        </div>
+
+        <!--SUBMIT-->
+        <div id="buttonDiv">
+            <button type="submit" class="btn-custom"> Register </button>
+        </div>
+
+        <!--MESSAGES FROM BACK-END-->
+        <div ng-show="errorMessage" class="succRegister">
+            <p>{{ errorMessage }}</p> <br>
+        </div>
+
+        <div ng-show="successMessage" class="succRegister">
+            <p>{{ successMessage }}</p><br>
+        </div>
+    </form>
+</div>

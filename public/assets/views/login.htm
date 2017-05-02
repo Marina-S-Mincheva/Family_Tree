@@ -1,0 +1,25 @@
+<div id='loginForm' class="form-container">
+    <form ng-submit="loginFunc();" method="POST" novalidate="novalidate">
+        <!--{{theTree}}-->
+        <label for="email"> Email </label><br>
+        <input class="form-control" ng-model="formsModel.email" name="email" id="emailLogin" type="email">
+        <div class="errorsLogin" id="emailErrorLogin">
+            <p></p><br></div>
+        <label for="password"> Password </label><br>
+        <input class="form-control" ng-model="formsModel.password" name="password" id="passwordLogin" type="password">
+
+        <div id="buttonDivLogin">
+            <button type="submit" class="btn-custom"> Login </button>
+            <!--&nbsp;-->
+            <!--<a href="/auth/facebook"><button type="button" class="btn-custom">Facebook</button></a> -->
+            <!--ng-click="facebookBtn();"-->
+        </div>
+
+        <div ng-show="errorMessage" class="errorsLogin">
+            <p>{{ errorMessage }}</p> <br></div>
+
+        <div ng-show="successMessage" class="errorsLogin">
+            <p>{{ successMessage }}</p> <br></div>
+    </form>
+    <!--<pre> {{ formsModel | json}}</pre>-->
+</div>

@@ -1,0 +1,500 @@
+#ft-memberForm {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+center img {
+    width: 55px;
+}
+
+#startForm {
+    float: left;
+}
+
+#startForm,
+#saveTree,
+#deleteTree,
+#backToMyTree,
+#printTree {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 0.5px solid white;
+    margin: 20px 5px;
+}
+
+#startForm:hover,
+#saveTree:hover,
+#deleteTree:hover,
+#backToMyTree:hover,
+#printTree:hover {
+    background-color: black;
+    border: 0.5px solid white;
+    box-shadow: 0px 0px 15px black;
+}
+
+
+/*****/
+
+#profilePic,
+#profilePic-found {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#profPic {
+    margin-left: 120px;
+    margin-top: 10px;
+    width: 120px;
+    height: auto;
+}
+
+.ui-dialog {
+    position: fixed;
+    box-shadow: 10px 10px 20px black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+}
+
+.ui-dialog label {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.ui-dialog,
+.ui-dialog div {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1em;
+    color: white;
+}
+
+.ui-dialog input,
+.ui-dialog select {
+    border: 1px solid white;
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    border-radius: 5px;
+}
+
+.ui-dialog input:hover,
+.ui-dialog select:hover {
+    background-color: black;
+    box-shadow: 0px 0px 8px white;
+}
+
+.ui-dialog option {
+    background-color: rgba(0, 0, 0, 0.97);
+    color: white;
+}
+
+.ui-dialog input[type=button] {
+    padding: 8px 21px !important;
+    cursor: pointer;
+    border: 1px solid;
+    margin-top: 20px !important;
+    margin-right: 30px !important;
+}
+
+.ui-dialog input[type=button]:hover {
+    background-color: black;
+}
+
+#ui-id-1+button {
+    /*     background: url("../images/close.png") no-repeat; */
+    border-color: black;
+    background: black;
+    display: none;
+}
+
+.ui-button {
+    display: none;
+}
+
+#ft-member-details {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+#ft-member-details table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    left: 34%;
+    padding: 30px;
+    position: relative;
+    top: 23%;
+    width: 461px;
+    box-shadow: 0 0 23px #4C4B4B;
+}
+
+#ft-member-details img {
+    height: 114px;
+}
+
+#ft-memberForm table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    left: 34%;
+    padding: 30px;
+    position: relative;
+    top: 23%;
+    width: 461px;
+    box-shadow: 0 0 23px #4C4B4B;
+}
+
+#treeGround {
+    width: 10000px;
+    cursor: move;
+}
+
+.ft-cross {
+    left: 34%;
+    top: 23%;
+    padding-left: 446px;
+    position: absolute;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.member {
+    height: 107px;
+    overflow: hidden;
+    width: 113px;
+    border: 1px solid #969696;
+    position: absolute;
+}
+
+center img {
+    padding-top: 10px;
+    height: 65px;
+}
+
+#ft-family-tree {
+    overflow: hidden;
+    /*height: 500px;
+    width: 1000px;*/
+    margin: auto;
+    width: 100%;
+    height: 600px;
+    border: 1px solid #969696;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tree-ground ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    cursor: move;
+}
+
+.tree-ground li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    cursor: pointer;
+}
+
+#ft-popmenu {
+    position: fixed !important;
+    font-weight: 400;
+    display: none;
+    z-index: 15;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 7px 7px 14px black;
+}
+
+#ft-popmenu ul {
+    list-style: none outside none;
+    padding: 7px;
+    width: 136px;
+    border-color: #C4C4C4;
+    border-image: none;
+    border-width: 0 1px 1px;
+    padding: 0px;
+    padding-left: 0;
+    width: 136px;
+}
+
+#ft-popmenu ul li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#ft-popmenu ul li {
+    padding: 8px 0 8px 10px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#ft-popmenu ul li:hover {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 0px 0px 8px white;
+}
+
+.spouse:before {
+    border-top: 5px solid #333;
+    /*     *************** */
+    content: "";
+    display: inline-block;
+    left: -60px;
+    position: relative;
+    top: 45px;
+    width: 30px;
+}
+
+.single-member {
+    height: 100px;
+}
+
+
+/*.spouse {
+position: inherit;
+}*/
+
+
+/*::before and ::after to draw the connectors*/
+
+.tree-ground li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 60%;
+    border-top: 5px solid #333;
+    /*     ***************** */
+    width: 40%;
+    height: 17px;
+}
+
+.tree-ground li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-top: 5px solid #333;
+    /*     ************ */
+    border-left: 5px solid #333;
+    /*     ************** */
+    width: 80%;
+    height: 15px;
+    /*     right: -5%; */
+    left: 33%;
+}
+
+
+/* .tree-ground li::after {
+    right: auto;
+    left: 34%;
+    border-left: 4px solid #333;
+} */
+
+
+/*remove left-right connectors from elements without 
+any siblings*/
+
+.tree-ground li:only-child::after,
+.tree-ground li:only-child::before {
+    display: none;
+}
+
+
+/*Remove space from the top of single children*/
+
+.tree-ground li:only-child {
+    padding-top: 0;
+    left: 45px;
+}
+
+
+/*Remove left connector from first child and 
+right connector from last child*/
+
+.tree-ground li:first-child::before,
+.tree-ground li:last-child::after {
+    border: 0 none;
+}
+
+
+/*Adding back the vertical connector to the last nodes*/
+
+.tree-ground li:last-child::before {
+    border-right: 5px solid #333;
+    /*     ********************** */
+    height: 15px;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+
+.tree-ground li:first-child::after {
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+
+
+/*downward connectors from parents*/
+
+.tree-ground ul ul::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    border-left: 5px solid #333;
+    /*     ******************* */
+    width: 0;
+    height: 60px;
+}
+
+.tree-ground li a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 7px 7px 14px rgb(0, 0, 0);
+    margin: 0 15px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    display: inline-block;
+    text-align: right;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+#treeGround li a span.fa-close,
+#treeGroundFound li a span.fa-close {
+    margin-right: -4px;
+    visibility: hidden;
+}
+
+
+/*#treeGround li a:hover span.fa-close {
+    visibility: visible;
+}*/
+
+
+/*hover effects*/
+
+
+/*apply the hover effect to the lineage of the element*/
+
+.tree-ground li a:hover,
+.tree-ground li a:hover+ul li a,
+.tree-ground li a:hover~ul li a {
+    background: rgba(0, 0, 0, 0.35);
+    /*border: 4px solid #42774aZZZZ;*/
+}
+
+
+/*Connector styles on hover*/
+
+
+/*.tree-ground li a:hover+ul li::after,
+.tree-ground li a:hover+ul li::before,
+.tree-ground li a:hover+ul::before,
+.tree-ground li a:hover+ul ul::before {
+    border-color: #333;
+}*/
+
+#ftMemberForm {
+    display: none;
+}
+
+#found-family-tree {
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    height: 600px;
+    border: 1px solid #969696;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#searchField {
+    width: 192px;
+    height: 26px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
+    padding-left: 5px;
+    float: right;
+    margin-right: 5px;
+}
+
+#searchField::placeholder {
+    color: white;
+}
+
+#searchField:hover {
+    box-shadow: 0px 0px 8px black;
+    background-color: black;
+}
+
+#divFind {
+    display: inline;
+}
+
+#foundList {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 192px;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    top: 89px;
+    /* top: 0px; */
+    z-index: 5000;
+}
+
+.foundPeople {
+    box-shadow: 0px 0px 6px 0px white;
+}
+
+.foundPeople li {
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    width: 182px;
+    color: white;
+    padding: 5px 5px;
+    font-size: 0.8em;
+    margin: 1px 5px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+
+.foundPeople li:hover {
+    background-color: black;
+    box-shadow: 0px 0px 16px 0px white;
+    font-weight: 700;
+}

@@ -1,0 +1,42 @@
+<div ng-controller="DashboardController">
+
+    <div id='mainDashboard'>
+        <h1 id='welcomeUser'>{{welcome}} <span id='welcomeEmail'>{{email}}</span></h1>
+
+        <button id='startForm' type="button" onclick="createNewMemberForm();">Create Tree</button>
+        <button id='saveTree' type="submit" ng-click="saveTree();">Save Tree</button>
+        <button id='deleteTree' type="button" onclick="deleteTree();" ng-click="saveTree();">Delete Tree</button>
+        <button id='backToMyTree' type="button" onclick="backToMyTree();">Back to My Tree</button>
+        <button id='printTree' print-btn>Print Tree</button>
+
+        <!--SEARCH FIELD-->
+        <div id="divFind" ng-click="findTrees();">
+            <input id="searchField" ng-model="search.name" type="text" placeholder="search by name..." />
+            <div id="foundList">
+                <div ng-repeat="oneTree in tree">
+                    <ul class="foundPeople">
+                        <li ng-show='search.name' ng-click="clearSearch();" onclick="getTree();" ng-repeat="person in oneTree | filter: search: strict ">{{ person.name }}<span class='selectedHashKey'>*{{ oneTree.$$hashKey }}</span> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ng-show="isVisible">
+            <p id="noMatches" ng-show="!( tree | filter:search).length" class="ng-hide" ng-cloak>No Matches Found</p>
+        </div>
+
+        <!--THE TREE-->
+        <!--<div style="color:blue;">-->
+        <div id="found-family-tree" print-section>
+        </div>
+        <!--</div>-->
+
+        <div id="ft-family-tree" print-section>
+            
+        </div>
+        <script>
+            var ftFamily = $('#ft-family-tree').ft_family({
+                referenceVar: 'ftFamily'
+            });
+        </script>
+    </div>
+</div>

@@ -1,0 +1,1238 @@
+body {
+    margin: 0 auto;
+    background: url("../images/1tree-background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#container {
+    /*opacity: 0.5;*/
+    height: 800px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*HEADER*/
+
+.navbar-header {
+    float: left;
+    margin-left: 2em;
+}
+
+.navLi {
+    display: inline-block;
+    /*margin-left: 5px;*/
+    margin-top: 1em;
+    line-height: 30px;
+}
+
+.liA {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: block;
+    padding: 5px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.liA:hover {
+    color: white;
+    font-size: 1.2em;
+    /*border: 1px solid white;*/
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px white;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 0.5em;
+}
+
+#logo-wrapper {
+    margin-top: 1em;
+    display: inline-block;
+    position: relative;
+}
+
+#logo-wrapper-text {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#logo-wrapper h1 {
+    font-size: 1.5em;
+    display: inline;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#logo-wrapper p {
+    color: white;
+    font-size: 0.8em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navDiv {
+    float: right;
+    padding: 10px;
+}
+
+#login-btn>a {
+    border-radius: 5px;
+}
+
+#logout-btn>a {
+    border-radius: 5px;
+}
+
+.navbar-default {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100px;
+}
+
+.dropdown {
+    display: none;
+}
+
+
+/* Collapse menu breakpoint */
+
+@media (max-width: 1149px) {
+    #navMenu {
+        display: none;
+    }
+    .dropbtn {
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid white;
+        color: white;
+        padding: 8px 18px;
+        font-size: 1.5em;
+        /*         border: none; */
+        cursor: pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 5px;
+    }
+    .dropdown {
+        position: relative;
+        display: block;
+        float: right;
+        padding: 8px 18px;
+        margin-top: 1em;
+        margin-right: 2.5em;
+        border-radius: 5px;
+        color: #fff;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    .dropdown-content a {
+        width: 165px;
+        color: white;
+        margin: 5px 3px;
+        padding: 5px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        /*font-weight: 700;*/
+        /*background-color: black;
+        border: 1px solid white;*/
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+        z-index: 1000;
+    }
+    .dropdown:hover .dropbtn {
+        background-color: black;
+        box-shadow: 0px 0px 15px white;
+    }
+}
+
+
+/*MAIN PAGE*/
+
+#main {
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#treeImg {
+    display: block;
+    margin: auto;
+    width: 60%;
+    height: auto;
+}
+
+#h1Tree {
+    text-align: center;
+    color: #222;
+    font-size: 2.7em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#hTree {
+    text-align: center;
+    color: #222;
+    font-size: 4em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#welcomeUser {
+    text-align: center;
+    padding-top: 20px;
+    color: #222;
+    font-size: 1.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#welcomeEmail {
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+/*LOGIN FORM */
+
+.ng-scope {
+    position: relative;
+}
+
+input {
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+#loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 80px 0 0 -125px;
+    width: 250px;
+    height: 350px;
+}
+
+#loginForm input {
+    width: 192px;
+    height: 25px;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding-left: 5px;
+}
+
+#loginForm input:hover {
+    box-shadow: 0px 0px 8px white;
+    background-color: black;
+    color: white;
+}
+
+.form-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 2em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1.2em;
+    padding: 30px;
+    box-shadow: 7px 7px 14px black;
+    color: white;
+}
+
+.errorsLogin>p {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #ff2b2b;
+    margin: 6.5px;
+    text-align: center;
+}
+
+
+/*REGISTER FORM*/
+
+#buttonDiv {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#buttonDivLogin {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.succRegister {
+    padding-top: 6px;
+    text-align: center;
+    height: 20px;
+    color: red;
+}
+
+.errors {
+    height: 28px;
+    padding: 1px 2px;
+}
+
+#innerSignUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 80px 0 0 -125px;
+    width: 250px;
+    height: 475px;
+}
+
+.errors .regMessages {
+    color: #ff2b2b;
+}
+
+.errors .regMessages li {
+    /*list-style-type: circle;*/
+    list-style-position: inside;
+    font-size: 0.7em;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid white;
+    -webkit-text-fill-color: white;
+    transition: background-color 5000s ease-in-out 0s;
+    padding-left: 5px;
+}
+
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#innerSignUp input {
+    width: 192px;
+    height: 25px;
+    margin-top: 0.5em;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding-left: 5px;
+}
+
+#innerSignUp input:hover {
+    box-shadow: 0px 0px 8px white;
+    background-color: black;
+}
+
+.errors>p {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #ff2b2b;
+    margin: 6.5px 1px 8.5px 1px;
+}
+
+.btn-custom {
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    margin: 4px 0px;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 1em;
+    padding: 8px 11px;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: black;
+    box-shadow: 0px 0px 8px white;
+}
+
+
+/***********************DASHBOARD*************************/
+
+
+/*#mainDashboard {
+    margin: 2em;
+}*/
+
+
+/*FOOTER*/
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*social media*/
+
+.option2 {
+    background: url("../images/linkedin2.png") no-repeat center center;
+    -webkit-background-size: cover;
+    /*-moz-background-size: cover;*/
+    -o-background-size: cover;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.option1 {
+    background: url("../images/linkedin.png") no-repeat center center;
+    -webkit-background-size: cover;
+    /*-moz-background-size: cover;*/
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.option4 {
+    background: url("../images/facebook2.png") no-repeat center center;
+    -webkit-background-size: cover;
+    /*-moz-background-size: cover;*/
+    -o-background-size: cover;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+}
+
+.option3 {
+    background: url("../images/facebook.png") no-repeat center center;
+    -webkit-background-size: cover;
+    /*-moz-background-size: cover;*/
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.option6 {
+    background: url("../images/pinterest2.png") no-repeat center center;
+    -webkit-background-size: cover;
+    /*-moz-background-size: cover;*/
+    -o-background-size: cover;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+}
+
+.option5 {
+    background: url("../images/pinterest.png") no-repeat center center;
+    -webkit-background-size: cover;
+    /*-moz-background-size: cover;*/
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+#wrapSocial {
+    width: 100%;
+    padding: 20px 0;
+}
+
+#social {
+    display: block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.media {
+    display: inline-block;
+    padding: 5px;
+    /*border-radius: 24%;
+    -moz-border-radius: 24px;
+    -webkit-border-radius: 24px;*/
+}
+
+.media img {
+    display: block;
+    width: 100%;
+    float: left;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    /*-moz-border-radius: 24px;*/
+    -webkit-border-radius: 50px;
+    /*-webkit-border-top-left-radius: 24px;
+    -webkit-border-top-right-radius: 24px;
+    -webkit-border-bottom-left-radius: 24px;
+    -webkit-border-bottom-right-radius: 24px;*/
+}
+
+
+/*CONTACTS*/
+
+#wrapContacts {
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+#logoWrap,
+#verticalLine {
+    display: block;
+    float: right;
+    width: 100%;
+}
+
+#logoWrap span,
+a {
+    padding: 0 10px;
+}
+
+#verticalLine a {
+    color: white;
+    font-size: 0.8em;
+    border-radius: 5px;
+}
+
+#logoName a {
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    cursor: auto;
+}
+
+#logoPNG img {
+    display: block;
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+#colorImag:hover {
+    background-color: darkolivegreen;
+}
+
+#verticalLine .try a:hover {
+    color: white;
+    font-size: 1.2em;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px white;
+}
+
+
+/*RESPONSIVE LAYOUT*/
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+    body {
+        width: 100%;
+    }
+    #wrapSocial {
+        width: 100%;
+        padding: 10px 0;
+    }
+    #wrapSocial #social .media {
+        margin: 0 auto;
+        text-align: left;
+    }
+    .media a {
+        display: inline-block;
+        width: 13%;
+    }
+    .media a img {
+        display: block;
+        width: 100%;
+        float: left;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    #wrapContacts {
+        width: 100%;
+        padding: 10px 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: inline-block;
+    }
+    #wrapLogoPNG {
+        width: 20%;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    #logoPNG {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #logoPNG img {
+        display: block;
+        float: left;
+        width: 40px;
+        height: 40px;
+    }
+    #logoName a {
+        display: block;
+        float: right;
+        font-size: 1.4em;
+        padding: 10px 0;
+        text-align: left;
+        width: 100%;
+        cursor: auto;
+    }
+    #logoWrap {
+        width: 70%;
+    }
+    #verticalLine {
+        width: 100%;
+    }
+    #verticalLine a {
+        display: block;
+        float: left;
+        color: white;
+        text-align: center;
+        width: 33%;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+    #wrapSocial {
+        width: 100%;
+        padding: 10px 0;
+    }
+    #wrapSocial #social .media {
+        margin: 0 auto;
+        text-align: left;
+    }
+    .media a {
+        display: inline-block;
+        width: 13%;
+    }
+    .media img {
+        display: block;
+        width: 100%;
+        float: left;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    #wrapContacts {
+        width: 100%;
+        padding: 10px 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: inline-block;
+    }
+    #wrapLogoPNG {
+        width: 20%;
+        display: inline-block;
+    }
+    #wrapLogoPNG #logoPNG {
+        width: 50%;
+        margin: 0 auto;
+    }
+    #logoPNG img {
+        display: block;
+        float: left;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10px;
+    }
+    #logoName a {
+        display: block;
+        float: right;
+        font-size: 1.7em;
+        padding-top: 15px;
+        text-align: left;
+        width: 100%;
+        cursor: auto;
+    }
+    #logoWrap {
+        width: 70%;
+    }
+    #verticalLine {
+        width: 80%;
+        display: inline-block;
+    }
+    #verticalLine a {
+        display: block;
+        float: left;
+        color: white;
+        text-align: center;
+        width: 30%;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        width: 100%;
+    }
+    #wrapSocial {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .media img {
+        display: block;
+        width: 100%;
+        float: left;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    #wrapContacts {
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: inline-block;
+    }
+    #wrapLogoPNG {
+        width: 20%;
+        display: inline-block;
+    }
+    #wrapLogoPNG #logoPNG {
+        width: 50%;
+        margin: 0 auto;
+    }
+    #logoPNG img {
+        display: block;
+        float: left;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10px;
+    }
+    #logoName a {
+        display: block;
+        float: left;
+        font-size: 1.7em;
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+        cursor: auto;
+    }
+    #logoWrap {
+        width: 80%;
+    }
+    #verticalLine {
+        width: 80%;
+        display: inline-block;
+    }
+    #verticalLine a {
+        display: block;
+        float: left;
+        color: white;
+        text-align: center;
+        width: 30%;
+        font-size: 1.2em;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1950px) {
+    body {
+        width: 80%;
+    }
+    #wrapSocial {
+        width: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+    .media img {
+        display: block;
+        width: 100%;
+        float: left;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    #wrapContacts {
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: inline-block;
+    }
+    #wrapLogoPNG {
+        width: 15%;
+        display: inline-block;
+    }
+    #wrapLogoPNG #logoPNG {
+        width: 60%;
+        margin: 0 auto;
+    }
+    #logoPNG img {
+        display: block;
+        float: left;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10px;
+        -webkit-padding-before: 0px;
+    }
+    #logoWrap {
+        width: 30%;
+    }
+    #logoName a {
+        display: block;
+        float: right;
+        font-size: 1.7em;
+        padding-top: 27px;
+        cursor: auto;
+        -webkit-padding-before: 30px;
+    }
+    #verticalLine {
+        width: 40%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    #verticalLine .try {
+        display: block;
+        float: left;
+        width: 31%;
+        margin: 0 auto;
+    }
+    #verticalLine .try a {
+        display: block;
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 16px;
+        padding: 8px;
+        text-align: center;
+    }
+}
+
+
+/*CONTACT US PAGE*/
+
+#contactUs {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 100px auto;
+    border-radius: 5px;
+    width: 60%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 10px 10px 20px black;
+    height: 400px;
+}
+
+#contactUs h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+
+/* 
+#formFields{
+    margin: auto;
+    width: 80%;
+} */
+
+#send {
+    display: block;
+    margin: 20px auto 15px auto;
+    padding: 10px;
+    width: 100px;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#send:hover {
+    background-color: black;
+    box-shadow: 0px 0px 15px white;
+}
+
+#formFields {
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+#nameField {
+    float: left;
+    width: 45%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: white;
+    padding: 3px;
+}
+
+#nameField::placeholder {
+    color: white;
+}
+
+#nameField:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px white;
+}
+
+#emailField {
+    float: right;
+    width: 45%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: white;
+    padding: 3px;
+}
+
+#emailField:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px white;
+}
+
+#emailField::placeholder {
+    color: white;
+}
+
+#message {
+    width: 100%;
+    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 0px 80px 0px;
+    font-size: 1.2em;
+}
+
+#message:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px white;
+}
+
+#message::placeholder {
+    color: white;
+}
+
+.selectedHashKey {
+    display: none;
+}
+
+
+/*ABOUT PAGE*/
+
+#aboutDiv {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 100px auto;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 10px 10px 20px black;
+    height: 700px;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+#aboutDiv h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.0em;
+    padding: 20px 0 30px 0;
+    /*text-decoration: underline;*/
+    text-shadow: 1px 1px 4px black;
+    text-decoration: overline;
+}
+
+#aboutDiv img {
+    margin-top: 20px;
+    width: 700px;
+    height: 200px;
+}
+
+#aboutDiv p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 10px 40px;
+    font-weight: 550;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+#found-family-tree {
+    border: 1px solid black;
+    height: 200px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    #aboutDiv img {
+        margin-top: 10px;
+        width: 200px;
+        height: 100px;
+    }
+    #aboutDiv h1 {
+        text-decoration: none;
+    }
+    #aboutDiv p {
+        padding: 5px;
+    }
+    #aboutDiv {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1950px) {
+    #aboutDiv img {
+        margin-top: 10px;
+        width: 500px;
+        height: 200px;
+    }
+}
+
+
+/*LICENSE PAGE*/
+
+#licenseDiv {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 100px auto;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 10px 10px 20px black;
+    height: 700px;
+    text-align: center;
+    padding: 17px 50px;
+    line-height: 1.8em;
+}
+
+#licenseDiv2 {
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#licenseDiv2 h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.0em;
+    padding: 10px 0 20px 0;
+    text-decoration: underline;
+}
+
+#licenseDiv2 p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    text-align: left;
+    padding: 10px;
+    font-weight: 550;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+
+/*HOW IT WORKS PAGE*/
+
+#howToWorkDiv {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 50px auto;
+    border-radius: 5px;
+    width: 90%;
+    box-shadow: 10px 10px 20px black;
+    height: 700px;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: center;
+    padding: 17px 40px;
+    line-height: 1.8em;
+    /*display: flex;*/
+}
+
+#howToWorkDiv p {
+    text-align: justify;
+}
+
+#howToWorkDiv2 {
+    border: 2px solid black;
+}
+
+#howToWorkDiv img {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+#howToWorkDiv h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.2em;
+    padding: 20px 0 20px 0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+#howToWorkDiv div h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+#howToWorkDiv div {
+    display: inline-block;
+    margin: 50px auto 20px auto;
+}
+
+#step1 {
+    padding: 20px 0;
+}
+
+#step1 p {
+    float: right;
+    width: 70%;
+}
+
+#img1 {
+    display: block;
+    float: right;
+}
+
+#step2 p {
+    width: 100%;
+    float: left;
+}
+
+#img2 {
+    width: 22%;
+    display: block;
+    float: right;
+}
+
+#img5 {
+    width: 150px;
+    height: 150px;
+    clear: left;
+}
+
+
+/*#step5 {
+    display: inline-block;
+}*/
+
+#step5 img {
+    float: left;
+    margin-right: 10px;
+}
+
+#step6 p {
+    float: left;
+    width: 100%;
+}
+
+#step6 img {
+    width: 80%;
+    height: 50%;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 950px) {
+    #howToWorkDiv {
+        overflow: scroll;
+    }
+    #howToWorkDiv img {
+        display: block;
+        margin: 0 auto;
+    }
+    #howToWorkDiv div p {
+        display: inline-block;
+    }
+    #howToWorkDiv div img {
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 799px) {
+    #howToWorkDiv {
+        overflow: scroll;
+    }
+    #howToWorkDiv img {
+        display: block;
+        margin: 0 auto;
+    }
+    #howToWorkDiv div p {
+        float: left;
+    }
+    #howToWorkDiv div img {
+        float: left;
+    }
+    #step6 img {
+        width: 50%;
+        height: 20%;
+    }
+}
+
+#howToWorkDiv p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    text-align: left;
+    padding: 10px;
+    font-weight: 550;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+#noMatches {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+    top: 80px;
+    right: -5px;
+    z-index: 1000;
+    color: red;
+    padding: 12px;
+}
+
+#ft-name-found,
+#ft-gender-found,
+#ft-age-found,
+#fbProfile-found {
+    padding: 5px;
+    color: white
+}
+
+#FoundMemberForm {
+    width: 200px;
+}
